@@ -104,25 +104,25 @@
                     icon="el-icon-document-copy">复制</el-button>
                 </el-input>
               </el-form-item>
-              <el-form-item label="订阅短链:">
+              <!-- <el-form-item label="订阅短链:">
                 <el-input class="copy-content" disabled v-model="curtomShortSubUrl">
                   <el-button slot="append" v-clipboard:copy="curtomShortSubUrl" v-clipboard:success="onCopy"
                     ref="copy-btn" icon="el-icon-document-copy">复制</el-button>
                 </el-input>
-              </el-form-item>
+              </el-form-item> -->
 
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
-                <el-button style="width: 140px" type="danger" @click="makeUrl"
+                <el-button style="width: 290px" type="danger" @click="makeUrl"
                   :disabled="form.sourceSubUrl.length === 0">生成订阅链接</el-button>
-                <el-button style="width: 140px" type="danger" @click="makeShortUrl" :loading="loading"
-                  :disabled="customSubUrl.length === 0">生成短链接</el-button>
+                <!-- <el-button style="width: 140px" type="danger" @click="makeShortUrl" :loading="loading"
+                  :disabled="customSubUrl.length === 0">生成短链接</el-button> -->
                 <!-- <el-button style="width: 140px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
               </el-form-item>
 
               <el-form-item label-width="0px" style="text-align: center">
-                <el-button style="width: 140px" type="primary" @click="dialogUploadConfigVisible = true"
-                  icon="el-icon-upload" :loading="loading">上传配置</el-button>
-                <el-button style="width: 140px" type="primary" @click="clashInstall" icon="el-icon-connection"
+                <!-- <el-button style="width: 140px" type="primary" @click="dialogUploadConfigVisible = true"
+                  icon="el-icon-upload" :loading="loading">上传配置</el-button> -->
+                <el-button style="width: 290px" type="primary" @click="clashInstall" icon="el-icon-connection"
                   :disabled="customSubUrl.length === 0">一键导入 Clash</el-button>
               </el-form-item>
               <el-form-item label-width="0px" style="text-align: center">
@@ -212,7 +212,7 @@ export default {
           Trojan: "trojan",
           Surge3: "surge&ver=3",
         },
-        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
+        backendOptions: [{ value: "https://sub.homans.world/sub?" }],
         remoteConfig: [
           {
             label: "universal",
